@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Flexbox</title>
+
+    <style>
+    body {
+background-color: orange;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    }
+    
+    .carreblanc
+    {
+        background-color: white;
+        width: 30%;
+    height: 50%;
+    }
+.box1 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.box1 h1 {
+    font-size: 20px;
+}
+.box1 input {
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px lightgrey;
+    border: none;
+}
+.box1 button {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    width: 70px;
+    height: 30px;
+}
+
+.choix
+{display: flex;
+    align-items: center;
+    margin-top: 40px;
+    height:40px;
+    
+}
+
+.choix2, .choix3, .choix4, .choix5
+{display: flex;
+    align-items: center;
+    height:40px;
+
+    
+    
+}
+
+.boxlangage{
+    flex:3;
+    justify-content: flex-start;
+    margin-left: 40px;
+   
+}
+
+.buttondelete{
+    flex:1;
+    
+}
+
+.buttondelete button {
+
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    height: 30px;
+}
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="carreblanc">
+        <div class="box1"><h1>Todo List</h1>
+        <input type="text">
+    <button>Add task</button>
+    </div>
+       
+    <div class="choix">
+    <div class="boxlangage"><p>HTML</p></div><div class="buttondelete"><button>Delete</button></div>
+    </div>
+
+    <div class="choix2">
+        <div class="boxlangage"><p>Javascript</p></div><div class="buttondelete"><button>Delete</button></div>
+        </div>
+        <div class="choix3">
+            <div class="boxlangage"><p>CSS</p></div><div class="buttondelete"><button>Delete</button></div>
+            </div>
+            <div class="choix4">
+                <div class="boxlangage"><p>Python</p></div><div class="buttondelete"><button>Delete</button></div>
+                </div>
+                <div class="choix5">
+                    <div class="boxlangage"><p>Play Game</p></div><div class="buttondelete"><button>Delete</button></div>
+                    </div>
+    </div>
+    
+</body>
+</html>
