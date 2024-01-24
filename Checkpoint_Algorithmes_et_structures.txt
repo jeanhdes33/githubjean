@@ -1,6 +1,7 @@
+1ere partie
 ALGORITHME 1
 
-ALGORITHME CompterMotsEtVoyelles
+ALGORITHME MotsEtVoyelles
 VAR
    phrase : STRING ;
    caractere : CHAR ;
@@ -34,3 +35,36 @@ DEMARRER
    Write("Nombre de mots dans la phrase : ", nombreMots) ;
    Write("Nombre de voyelles dans la phrase : ", nombreVoyelles) ;
 END
+
+2eme partie :
+
+ALGORITHME ELEMENTSDISTINCTS
+VAR
+   Ensemble1, Ensemble2 : ARRAY ;
+   somme : INTEGER ;
+   i, j : INTEGER ;
+   
+
+DEMARRER
+   
+   Ensemble1 = [3, 1, 7, 9]
+   Ensemble2 = [2, 4, 1, 9, 3]
+   somme = 0
+
+   FOR i FROM 0 TO À Length(Ensemble1) - 1 ET FOR j FROM 0 TO Length(Ensemble2) - 1 DO
+         IF Ensemble1[i] != Ensemble2[j] THEN
+	    somme = somme + Ensemble1[i]
+            SORTIR
+         FIN IF
+      FIN FOR
+
+  FOR i FROM 0 TO À Length(Ensemble2) - 1 ET FOR j FROM 0 TO Length(Ensemble1) - 1 DO
+  IF Ensemble2[i] != Ensemble1[j] THEN
+	    somme = somme + Ensemble2[i]
+            SORTIR // Sortir de la boucle si l'élément est trouvé dans l'ensemble 2
+         FIN IF
+      FIN FOR
+
+
+   Write("La somme des éléments distincts est : ", somme)
+FIN
