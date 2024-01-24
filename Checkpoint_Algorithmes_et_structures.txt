@@ -1,0 +1,36 @@
+ALGORITHME 1
+
+ALGORITHME CompterMotsEtVoyelles
+VAR
+   phrase : STRING ;
+   caractere : CHAR ;
+   nombreMots;
+   nombreVoyelles; 
+    i : INTEGER ;
+DEMARRER
+  
+   nombreMots = 0
+   nombreVoyelles = 0
+
+   // Demander à l'utilisateur d'entrer la phrase se terminant par un point
+   Write("Entrez une phrase se terminant par un point : ") ;
+   Read(phrase) ;
+
+
+   FOR i FROM 0 TO Length(phrase) - 1 DO
+      caractere = i
+    
+       IF (caractere EST UNE VOYELLE) THEN
+            nombreVoyelles = nombreVoyelles + 1
+        END IF
+
+      
+       IF (caractere = ' ') THEN
+         nombreMots = nombreMots + 1
+      END IF
+   END FOR
+
+ 
+   Write("Nombre de mots dans la phrase : ", nombreMots) ;
+   Write("Nombre de voyelles dans la phrase : ", nombreVoyelles) ;
+END
