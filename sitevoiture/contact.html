@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de vente de voiture</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+<div class="container" id="myContainer">
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        
+<ul>
+    <li><a href="index.html" class="awhite">Accueil</a></li>
+    <li><a href="acheter.html" class="awhite"> Nos modèles Taxi</a></li>
+    <li><a href="services.html" class="awhite">Services</a></li>
+    <li><a href="apropos.html" class="awhite">A propos</a></li>
+    <li><a href="contact.html" class="awhite" >Contact</a></li>
+</ul>
+
+    </div>
+    <div class="buttons">
+<button>Book now</button>
+<button>Test drive</button>
+<button onclick="changeContainerColor()">DarkMode</button>
+
+
+    </div>
+</div>
+
+   
+    </div>
+
+    <div class="maincontent">
+
+
+        <div class="content">
+            <h2>Contactez-nous</h2>
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    <div class="contactbutton">
+                <button type="button" onclick="submitForm()">Envoyer</button></div>
+            </form>
+
+    
+        </div>
+        
+        <div class="car_img">
+    <img src="https://cdn-icons-png.flaticon.com/512/3686/3686989.png" width="200px" height="200px">
+        </div>
+    </div>
+    <div class="futures">
+        <div class="engine">
+         <img src="https://i.pinimg.com/originals/c1/00/d4/c100d4c70bc17365a2a42ac22ef782da.png">
+         <p>Nos équipes du Service Relation Client sont aussi à votre disposition au 05 20 017 017  </p>   
+        </div>
+        <div class="transmission">
+            <img src="https://cdn-icons-png.flaticon.com/512/5045/5045663.png">
+        <p> Joignez-nous également via notre Live Chat du Lundi au Samedi de 8h à 20h</p>
+        </div>
+      
+       
+    </div>
+</div>
+    <script>
+
+function submitForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    console.log('Nom:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+}
+    </script>
+</body>
+</html>
