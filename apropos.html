@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de vente de voiture</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+<div class="container" id="myContainer">
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        
+<ul>
+    <li><a href="index.html" class="awhite">Accueil</a></li>
+    <li><a href="acheter.html" class="awhite"> Nos modèles Taxi</a></li>
+    <li><a href="services.html" class="awhite">Services</a></li>
+    <li><a href="apropos.html" class="awhite">A propos</a></li>
+    <li><a href="contact.html" class="awhite" >Contact</a></li>
+</ul>
+
+    </div>
+    <div class="buttons">
+<button>Book now</button>
+<button>Test drive</button>
+<button onclick="changeContainerColor()">DarkMode</button>
+
+
+    </div>
+</div>
+
+   
+    </div>
+
+    <div class="maincontent">
+        <div class="content">
+<h1>DACIA, UNE MARQUE NÉE DEUX FOIS</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora saepe aliquid exercitationem unde, aut beatae sed nesciunt doloribus. Laboriosam fuga beatae praesentium ipsum id aperiam deleniti, saepe quidem quas enim!</p>
+          
+        </div>
+        
+        <div class="car_img">
+            <img src="https://cdn.group.renault.com/dac/master/dacia-vn/editorial/about-dacia/dacia-editorial-about-dacia-062.jpg.ximg.large.webp/032c21e868.webp" width="60%">
+      
+    
+        </div>
+        <div class="car_img"> <img src="https://cdn.group.renault.com/dac/master/dacia-vn/editorial/about-dacia/dacia-editorial-about-dacia-063.jpg.ximg.large.webp/fa20fe1bbb.webp" width="60%"></div>
+            <div class="content">
+            <h1>LE LANCEMENT DE LOGAN, EN 2004...</h1>
+          
+            <p>...signe la renaissance de la marque. Logan est une berline familiale moderne et robuste, conçue initialement pour les marchés émergeants au prix imbattable de 5000€. C’est une révolution sur le marché automobile, ce qui lui vaut un vif succès commercial, y compris en Europe occidentale, où Logan fait son apparition en 2005.</p>
+           
+        </div>
+
+     
+      
+    </div>
+
+    
+    <div class="futures">
+
+       
+        
+       
+    </div>
+</div>
+<script>
+    function scrollToContact() {
+        const contactSection = document.querySelector('.contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

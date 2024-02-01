@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de vente de voiture</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+   
+</head>
+<body>
+<div class="container" id="myContainer">
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        
+<ul>
+    <li><a href="index.html" class="awhite">Accueil</a></li>
+    <li><a href="acheter.html" class="awhite"> Nos modèles Taxi</a></li>
+    <li><a href="services.html" class="awhite">Services</a></li>
+    <li><a href="apropos.html" class="awhite">A propos</a></li>
+    <li><a href="contact.html" class="awhite" >Contact</a></li>
+</ul>
+
+    </div>
+    <div class="buttons">
+<button>Book now</button>
+<button>Test drive</button>
+<button onclick="changeContainerColor()">DarkMode</button>
+
+
+    </div>
+</div>
+
+   
+    </div>
+
+    <div class="maincontent">
+        <div class="content">
+<h1>Gagnez du temps et restez serein</h1>
+            <p>Rendez-vous en ligne, forfaits, assurance et assistance,
+                programme personnalisé MY Renault... Renault care service s'occupe de tout.</p>
+            <div class="buttons"><button onclick="scrollToContact()">Prendre rendez-vous</button></div>
+        </div>
+        
+        <div class="car_img">
+            <img src="https://cdn.group.renault.com/ren/master/renault-new-cars/editorial/renault-service/renault-editorial-service-020.jpg.ximg.large.webp/02a12c90f0.webp" width="60%">
+      
+    
+        </div>
+        <div class="car_img"> <img src="https://cdn.group.renault.com/ren/ma/service/image-APV.jpg.ximg.large.webp/8a4e90436c.webp" width="70%"></div>
+            <div class="content">
+            <h1>Atelier Mobile</h1>
+            <h2>l'entretien de votre véhicule où que vous soyez</h2>
+
+            <p>Plus besoin de vous déplacer ! Nos experts viennent jusqu'à chez vous.</p>
+           
+        </div>
+
+     
+      
+    </div>
+
+    
+    <div class="futures">
+
+       
+        
+       
+    </div>
+</div>
+<script>
+    function scrollToContact() {
+        const contactSection = document.querySelector('.contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
