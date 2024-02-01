@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de vente de voiture</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+<div class="container" id="myContainer">
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        
+<ul>
+    <li><a href="index.html" class="awhite">Accueil</a></li>
+    <li><a href="acheter.html" class="awhite"> Nos modèles Taxi</a></li>
+    <li><a href="services.html" class="awhite">Services</a></li>
+    <li><a href="apropos.html" class="awhite">A propos</a></li>
+    <li><a href="contact.html" class="awhite" >Contact</a></li>
+</ul>
+
+    </div>
+    <div class="buttons">
+<button>Book now</button>
+<button>Test drive</button>
+<button onclick="changeContainerColor()">DarkMode</button>
+
+
+    </div>
+</div>
+
+   
+    </div>
+
+    <div class="maincontent">
+        <div class="content">
+<h1>DACIA LODGY<br><span>Grand Taxi Premium</span></h1>
+            <p>Un maximum de confort pour un minimum de prix</p>
+            <div class="buttons"><button onclick="scrollToContact()">Réserver un essai</button></div>
+        </div>
+        
+        <div class="car_img">
+            <img src="voiture2.png" width="70%">
+      
+    
+        </div>
+            <div class="content">
+            <h1>DACIA LOGAN <br><span>Petit Taxi Grand Luxe</span></h1>
+            <p>Pour gérer tout type de courses</p>
+            <div class="buttons"><button onclick="scrollToContact()">Réserver un essai</button></div>
+        </div>
+
+        <div class="car_img"> <img src="voiture3.png" width="90%"></div>
+      
+    </div>
+
+    <hr>
+    <div class="futures">
+
+        <div class="contact">
+            <form class="contact-form" action="#" method="post">
+                     <label for="civilite">Civilité:</label>
+                     <select id="civilite" name="civilite" required>
+                         <option value="monsieur">Monsieur</option>
+                         <option value="madame">Madame</option>
+                     </select>
+            
+                     <label for="prenom">Prénom:</label>
+                     <input type="text" id="prenom" name="prenom" required>
+            
+                     <label for="nom">Nom:</label>
+                     <input type="text" id="nom" name="nom" required>
+            
+                     <label for="telephone">Téléphone:</label>
+                     <input type="tel" id="telephone" name="telephone" required>
+            
+                     <label for="ville">Ville:</label>
+                     <input type="text" id="ville" name="ville" required>
+            <div class="valider">
+                     <button type="submit">Envoyer</button>
+                 </div>
+        
+       
+    </div>
+</div>
+<script>
+    function scrollToContact() {
+        const contactSection = document.querySelector('.contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
