@@ -1,0 +1,34 @@
+ALGORITHME PALINDROME
+
+VAR
+    mot: STRING ;
+    length, i, debut, fin : INTEGER ;
+    estPalindrome : BOOLEAN ;
+
+DEMARRER
+
+    Write("Entrez un mot ") ;
+    Read(mot) ;
+
+    length = Length(word) ;
+    debut = 1 ;
+    fin = length ;
+   
+
+
+    WHILE debut < fin AND Palindrome DO
+        IF mot[debut] ≠ mot[fin] THEN
+            estPalindrome = FALSE ;
+        END IF
+
+    
+        debut = debut + 1 ;
+        fin = fin - 1 ;
+    END WHILE
+
+    IF estPalindrome = TRUE THEN
+        Write("Ce mot est un palindrome") ;
+    ELSE
+        Write("Ce mot n'est pas un palindrome") ;
+    END IF
+FIN
