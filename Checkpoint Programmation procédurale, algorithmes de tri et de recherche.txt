@@ -1,0 +1,90 @@
+PREMIERE TACHE
+
+
+FONCTION dot_product(v1, v2)
+    VAR
+        int : float ;
+        i, n : INTEGER ;
+
+    DEMARRER
+     
+        n = Longueur(v1) ;
+        SI n ≠ Longueur(v2) ALORS
+            Write("Les vecteurs n'ont pas la même dimension.") ;
+            RETURN ERROR ;
+        END IF
+
+        
+        ps = 0 ;
+        FOR i FROM 1 to n DO
+            ps = ps + v1[i] * v2[i] ;
+        END FOR
+
+        RETURN ERROR ;
+    END
+
+
+ALGORITHME DetermineROrthogonalE
+VAR
+    n, i : INTEGER ;
+    v1, v2 : ARRAY ;
+    produitScalaire : 0 ;
+
+DEMARRER
+    
+    Write("Entrez le nombre de couples de vecteurs : ") ;
+    Read(n) ;
+
+    FOR i FROM 1 TO n DO
+       
+        Write("Entrez le premier vecteur: ") ;
+        Read(v1) ;
+
+      
+        WRITE("Entrez le deuxième vecteur : ") ;
+        Read(v2) ;
+
+        produitScalaire = dot_product(v1, v2) ;
+
+
+        IF produitScalaire = 0 THEN
+            Write("Les vecteurs sont orthogonaux.") ;
+        ELSE
+            Write("Les vecteurs ne sont pas orthogonaux.") ;
+        END IF
+    END FOR
+FIN
+
+DEUXIEME TACHE
+
+VAR
+    array: ARRAY ;
+    length, i, j, elementToInsert : INTEGER ;
+
+DEMARRER
+
+    Write("Entrez la longueur du tableau: ") ;
+    Read(length) ;
+
+    Write("Entrez les éléments du tableau ") ;
+    FOR i FROM 0 TO length - 1 DO
+        Read(array[i]) ;
+    END FOR
+
+    FOR i FROM 1 TO length - 1 DO
+        elementToInsert = array[i] ;
+        j = i - 1 ;
+
+        WHILE j >= 0 AND array[j] > elementToInsert DO
+            array[j + 1] = array[j] ;
+            j = j - 1 ;
+        END WHILE
+
+        array[j + 1] = elementToInsert ;
+    END FOR
+
+
+    Write("Sorted array: ", array) ;
+FIN
+
+
