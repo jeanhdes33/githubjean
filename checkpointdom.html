@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panier d'achat</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #cart {
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .item {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .item span {
+    margin-right: 10px;
+  }
+
+  .quantity {
+    margin: 0 5px;
+  }
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .increment, .decrement, .remove, .like {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .increment:hover, .decrement:hover, .remove:hover, .like:hover {
+    background-color: #0056b3;
+  }
+
+  .like.liked {
+    background-color: pink;
+    color: white;
+  }
+
+  #total {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  #empty-cart {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div id="cart">
+  <div class="item" data-id="1">
+    <span>Article 1</span>
+    <button class="decrement">-</button>
+    <span class="quantity">0</span>
+    <button class="increment">+</button>
+    <button class="remove">Supprimer</button>
+    <button class="like">❤️</button>
+  </div>
+  <div class="item" data-id="2">
+    <span>Article 2</span>
+    <button class="decrement">-</button>
+    <span class="quantity">0</span>
+    <button class="increment">+</button>
+    <button class="remove">Supprimer</button>
+    <button class="like">❤️</button>
+  </div>
+  <div id="empty-cart" style="display: none;">
+    <p>Panier vide</p>
+  </div>
+</div>
+<div id="total">Total: $0</div>
+
+<script>
+  // Fonction pour mettre à jour le total
+  function updateTotal() {
+    let total = 0;
+    document.querySelectorAll('.item').forEach(item => {
+      const quantity = parseInt(item.querySelector('.quantity').textContent);
+      total += quantity * 10; // Prix par article (10$ dans cet exemple)
+    });
+    document.getElementById('total').textContent = 'Total: $' + total;
+  }
+
+  // Initialisation du total
+  updateTotal();
+
+  // Ajouter ou enlever la quantité d'un article
+  document.querySelectorAll('.item').forEach(item => {
+    const incrementBtn = item.querySelector('.increment');
+    const decrementBtn = item.querySelector('.decrement');
+    const quantityDisplay = item.querySelector('.quantity');
+
+    incrementBtn.addEventListener('click', () => {
+      let quantity = parseInt(quantityDisplay.textContent);
+      quantity++;
+      quantityDisplay.textContent = quantity;
+      updateTotal();
+    });
+
+    decrementBtn.addEventListener('click', () => {
+      let quantity = parseInt(quantityDisplay.textContent);
+      if (quantity > 0) {
+        quantity--;
+        quantityDisplay.textContent = quantity;
+        updateTotal();
+      }
+    });
+
+    // Supprimer un article
+    const removeBtn = item.querySelector('.remove');
+    removeBtn.addEventListener('click', () => {
+      item.remove();
+      if (document.querySelectorAll('.item').length === 0) {
+        document.getElementById('empty-cart').style.display = 'block';
+      }
+      updateTotal();
+    });
+
+    // Aimer un article
+    const likeBtn = item.querySelector('.like');
+    likeBtn.addEventListener('click', () => {
+      likeBtn.classList.toggle('liked'); // Ajoute ou supprime la classe 'liked'
+    });
+  });
+</script>
+</body>
+</html>
